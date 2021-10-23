@@ -11,6 +11,10 @@ app.use(express.urlencoded({extended: true}))
 
 app.use('/', user)
 
+app.get('/', (req,res)=>{
+    res.send("ROOT ROUTE WORKING")
+})
+
 app.listen(4200, ()=> {
     console.log('Server connected to port 4200');
 })
